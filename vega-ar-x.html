@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEGA AR-X - Travis Lizio</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Travis Lizio</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html" class="back-btn">← Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="project-type">Mobile App</div>
+        <h1>VEGA AR-X</h1>
+        <p class="subtitle">"Sprint-focused AR prototype for RMIT VEGA"</p>
+    </header>
+
+    <div class="project-content">
+        <div class="project-info">
+            <div class="info-sidebar">
+                <div class="info-item">
+                    <h3>Duration</h3>
+                    <p>4 weeks</p>
+                </div>
+                <div class="info-item">
+                    <h3>Role</h3>
+                    <p>UX Designer</p>
+                </div>
+                <div class="info-item">
+                    <h3>Tools</h3>
+                    <p>Figma, Unity, User Testing</p>
+                </div>
+                <div class="info-item">
+                    <h3>Platform</h3>
+                    <p>AR Mobile Application</p>
+                </div>
+                <div class="info-item">
+                    <h3>Client</h3>
+                    <p>RMIT VEGA</p>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>
+                    A prototype application designed in Figma and built in Unity for RMIT VEGA's Augmented Reality experience. This short-timeframe sprint focused on rapid prototyping, extensive user testing, and meeting a simulated industry brief under tight deadlines.
+                </p>
+                <p>
+                    The VEGA AR-X project challenged me to work within industry-standard sprint methodologies while delivering a functional AR prototype that met specific user requirements and technical constraints.
+                </p>
+
+                <div class="highlight">
+                    <h3>Sprint Challenge</h3>
+                    <p>Deliver a working AR prototype within a 4-week sprint while conducting continuous user testing and iterative design improvements. The tight timeline required efficient prioritization and rapid decision-making.</p>
+                </div>
+
+                <p>
+                    Working with Unity for the first time in a UX context taught me valuable lessons about the intersection of design and development, particularly how technical constraints impact user experience decisions in emerging technologies like AR.
+                </p>
+            </div>
+        </div>
+
+        <div class="pdf-section">
+            <h2>Project Documentation</h2>
+            <div class="pdf-container">
+                <iframe 
+                    class="pdf-viewer"
+                    src="pdfs/vega-ar-x.pdf#view=FitH"
+                    type="application/pdf">
+                </iframe>
+                <!-- Fallback content for browsers that don't support PDF viewing -->
+                <div class="pdf-fallback" style="display: none;">
+                    <h3>View Project Documentation</h3>
+                    <p>Your browser doesn't support inline PDF viewing.</p>
+                    <a href="pdfs/vega-ar-x.pdf" class="pdf-download-btn" target="_blank">
+                        Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if PDF loaded successfully
+        document.querySelector('.pdf-viewer').addEventListener('error', function() {
+            this.style.display = 'none';
+            document.querySelector('.pdf-fallback').style.display = 'block';
+        });
+
+        // Fallback for browsers that don't support PDF in iframe
+        document.querySelector('.pdf-viewer').addEventListener('load', function() {
+            try {
+                if (this.contentDocument && this.contentDocument.body && this.contentDocument.body.innerHTML === '') {
+                    this.style.display = 'none';
+                    document.querySelector('.pdf-fallback').style.display = 'block';
+                }
+            } catch(e) {
+                console.log('PDF viewer loaded');
+            }
+        });
+    </script>
+</body>
+</html>

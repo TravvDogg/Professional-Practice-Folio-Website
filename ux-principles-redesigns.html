@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Principles Redesigns - Travis Lizio</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Travis Lizio</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html" class="back-btn">← Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="project-type">Web Redesign</div>
+        <h1>UX Principles Redesigns</h1>
+        <p class="subtitle">"Tandem redesign of RMIT Enrolment & Amazon Homepage"</p>
+    </header>
+
+    <div class="project-content">
+        <div class="project-info">
+            <div class="info-sidebar">
+                <div class="info-item">
+                    <h3>Duration</h3>
+                    <p>12 weeks</p>
+                </div>
+                <div class="info-item">
+                    <h3>Role</h3>
+                    <p>UX Designer & Researcher</p>
+                </div>
+                <div class="info-item">
+                    <h3>Tools</h3>
+                    <p>Figma, User Research, A/B Testing</p>
+                </div>
+                <div class="info-item">
+                    <h3>Platform</h3>
+                    <p>Web Applications</p>
+                </div>
+                <div class="info-item">
+                    <h3>Focus</h3>
+                    <p>UX Principles Application</p>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>
+                    Redesigned both RMIT's Enrolment Online website and Amazon's homepage using UX Design principles to improve user interaction flow, increase efficiency, and reduce error rates. Heavy focus on external user research (quantitative and qualitative), iterative development with concurrent user research, and A/B testing to quantify improvements.
+                </p>
+                <p>
+                    This dual redesign project allowed me to explore how fundamental UX principles apply differently across various platforms and user contexts - from academic enrollment systems to e-commerce platforms.
+                </p>
+
+                <div class="highlight">
+                    <h3>Research-Driven Approach</h3>
+                    <p>Conducted extensive user research including quantitative analysis, qualitative interviews, and A/B testing to validate design decisions. The project emphasized evidence-based design improvements over aesthetic changes.</p>
+                </div>
+
+                <p>
+                    The 12-week timeline enabled comprehensive research phases, iterative design development, and thorough testing of proposed solutions. This project demonstrated how systematic application of UX principles can significantly improve user experiences across different digital environments.
+                </p>
+            </div>
+        </div>
+
+        <div class="pdf-section">
+            <h2>Project Documentation</h2>
+            <div class="pdf-container">
+                <iframe
+                    class="pdf-viewer"
+                    src="pdfs/ux-principles-redesigns.pdf#view=FitH"
+                    type="application/pdf">
+                </iframe>
+                <!-- Fallback content for browsers that don't support PDF viewing -->
+                <div class="pdf-fallback" style="display: none;">
+                    <h3>View Project Documentation</h3>
+                    <p>Your browser doesn't support inline PDF viewing.</p>
+                    <a href="pdfs/ux-principles-redesigns.pdf" class="pdf-download-btn" target="_blank">
+                        Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if PDF loaded successfully
+        document.querySelector('.pdf-viewer').addEventListener('error', function() {
+            this.style.display = 'none';
+            document.querySelector('.pdf-fallback').style.display = 'block';
+        });
+
+        // Fallback for browsers that don't support PDF in iframe
+        document.querySelector('.pdf-viewer').addEventListener('load', function() {
+            try {
+                if (this.contentDocument && this.contentDocument.body && this.contentDocument.body.innerHTML === '') {
+                    this.style.display = 'none';
+                    document.querySelector('.pdf-fallback').style.display = 'block';
+                }
+            } catch(e) {
+                console.log('PDF viewer loaded');
+            }
+        });
+    </script>
+</body>
+</html>

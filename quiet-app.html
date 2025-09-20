@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiet App - Travis Lizio</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Travis Lizio</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html" class="back-btn">← Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="project-type">Mobile App</div>
+        <h1>Quiet</h1>
+        <p class="subtitle">"Fully-functional meditation app with intelligent gesture recognition"</p>
+    </header>
+
+    <div class="project-content">
+        <div class="project-info">
+            <div class="info-sidebar">
+                <div class="info-item">
+                    <h3>Duration</h3>
+                    <p>12 weeks</p>
+                </div>
+                <div class="info-item">
+                    <h3>Role</h3>
+                    <p>Full-stack Developer & UX Designer</p>
+                </div>
+                <div class="info-item">
+                    <h3>Tools</h3>
+                    <p>Xcode, Figma, User Testing</p>
+                </div>
+                <div class="info-item">
+                    <h3>Platform</h3>
+                    <p>iOS Native App</p>
+                </div>
+                <div class="info-item">
+                    <h3>Project Type</h3>
+                    <p>Advanced Diploma Capstone</p>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>
+                    A mindfulness and meditation app designed for young adults struggling with stress, motivation, and sleep. As my Advanced Diploma capstone project, I handled full-stack development including UX design, user testing, and implementation.
+                </p>
+                <p>
+                    Built as a functioning application using Xcode with custom content and interactions, Quiet features intelligent gesture recognition and personalized meditation experiences tailored to individual user needs and preferences.
+                </p>
+
+                <div class="highlight">
+                    <h3>Technical Innovation</h3>
+                    <p>Implemented intelligent gesture recognition for hands-free meditation control, allowing users to navigate the app without breaking their mindfulness state. This required balancing technical complexity with intuitive user experience.</p>
+                </div>
+
+                <p>
+                    The 12-week development cycle allowed for extensive user research, iterative design, and comprehensive testing. This project demonstrated my ability to manage the complete product development lifecycle from concept to functional application.
+                </p>
+            </div>
+        </div>
+
+        <div class="pdf-section">
+            <h2>Project Documentation</h2>
+            <div class="pdf-container">
+                <iframe
+                    class="pdf-viewer"
+                    src="pdfs/quiet-app.pdf#view=FitH"
+                    type="application/pdf">
+                </iframe>
+                <!-- Fallback content for browsers that don't support PDF viewing -->
+                <div class="pdf-fallback" style="display: none;">
+                    <h3>View Project Documentation</h3>
+                    <p>Your browser doesn't support inline PDF viewing.</p>
+                    <a href="pdfs/quiet-app.pdf" class="pdf-download-btn" target="_blank">
+                        Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if PDF loaded successfully
+        document.querySelector('.pdf-viewer').addEventListener('error', function() {
+            this.style.display = 'none';
+            document.querySelector('.pdf-fallback').style.display = 'block';
+        });
+
+        // Fallback for browsers that don't support PDF in iframe
+        document.querySelector('.pdf-viewer').addEventListener('load', function() {
+            try {
+                if (this.contentDocument && this.contentDocument.body && this.contentDocument.body.innerHTML === '') {
+                    this.style.display = 'none';
+                    document.querySelector('.pdf-fallback').style.display = 'block';
+                }
+            } catch(e) {
+                console.log('PDF viewer loaded');
+            }
+        });
+    </script>
+</body>
+</html>

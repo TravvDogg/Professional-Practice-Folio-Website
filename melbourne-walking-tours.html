@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melbourne Walking Tours - Travis Lizio</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Travis Lizio</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html" class="back-btn">← Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="project-type">Mobile App</div>
+        <h1>Melbourne Walking Tours</h1>
+        <p class="subtitle">"My introduction into UX design and Figma"</p>
+    </header>
+
+    <div class="project-content">
+        <div class="project-info">
+            <div class="info-sidebar">
+                <div class="info-item">
+                    <h3>Duration</h3>
+                    <p>6 weeks</p>
+                </div>
+                <div class="info-item">
+                    <h3>Role</h3>
+                    <p>UX Designer</p>
+                </div>
+                <div class="info-item">
+                    <h3>Tools</h3>
+                    <p>Figma, User Testing, Guerrilla Research</p>
+                </div>
+                <div class="info-item">
+                    <h3>Platform</h3>
+                    <p>iOS Mobile App</p>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>
+                    Melbourne Walking Tours was created to guide Melbourne tourists through walking tours of the city's vibrant street art scene. This project marked my entry into UX design, where I conducted guerrilla user testing to validate design decisions and improve the user experience.
+                </p>
+                <p>
+                    The app focuses on creating an intuitive navigation experience that helps tourists discover Melbourne's hidden artistic gems while providing contextual information about the artwork and artists.
+                </p>
+
+                <div class="highlight">
+                    <h3>Key Challenge</h3>
+                    <p>Designing an intuitive mobile experience for tourists who may be unfamiliar with Melbourne's layout while ensuring the app works effectively in various lighting conditions and on-the-go scenarios.</p>
+                </div>
+
+                <p>
+                    Through iterative design and user testing, I learned the importance of validating assumptions early and often. The guerrilla testing approach provided invaluable insights into how real users interact with the interface in actual street conditions.
+                </p>
+            </div>
+        </div>
+
+        <div class="pdf-section">
+            <h2>Project Documentation</h2>
+            <div class="pdf-container">
+                <iframe 
+                    class="pdf-viewer"
+                    src="pdfs/melbourne-walking-tours.pdf#view=FitH"
+                    type="application/pdf">
+                </iframe>
+                <!-- Fallback content for browsers that don't support PDF viewing -->
+                <div class="pdf-fallback" style="display: none;">
+                    <h3>View Project Documentation</h3>
+                    <p>Your browser doesn't support inline PDF viewing.</p>
+                    <a href="pdfs/melbourne-walking-tours.pdf" class="pdf-download-btn" target="_blank">
+                        Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if PDF loaded successfully
+        document.querySelector('.pdf-viewer').addEventListener('error', function() {
+            this.style.display = 'none';
+            document.querySelector('.pdf-fallback').style.display = 'block';
+        });
+
+        // Fallback for browsers that don't support PDF in iframe
+        document.querySelector('.pdf-viewer').addEventListener('load', function() {
+            // If the iframe is empty or shows an error, show fallback
+            try {
+                if (this.contentDocument && this.contentDocument.body && this.contentDocument.body.innerHTML === '') {
+                    this.style.display = 'none';
+                    document.querySelector('.pdf-fallback').style.display = 'block';
+                }
+            } catch(e) {
+                // Cross-origin issues mean we can't check content, but PDF might still work
+                console.log('PDF viewer loaded');
+            }
+        });
+    </script>
+</body>
+</html>

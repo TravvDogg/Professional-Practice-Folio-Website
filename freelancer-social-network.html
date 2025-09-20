@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Social Network - Travis Lizio</title>
+        <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Travis Lizio</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html" class="back-btn">← Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="project-type">Web Platform</div>
+        <h1>Freelancer Social Network</h1>
+        <p class="subtitle">"People-centered platform for freelancers and clients"</p>
+    </header>
+
+    <div class="project-content">
+        <div class="project-info">
+            <div class="info-sidebar">
+                <div class="info-item">
+                    <h3>Duration</h3>
+                    <p>12 weeks</p>
+                </div>
+                <div class="info-item">
+                    <h3>Role</h3>
+                    <p>UX Designer & Researcher</p>
+                </div>
+                <div class="info-item">
+                    <h3>Tools</h3>
+                    <p>Figma, User Research, Prototyping</p>
+                </div>
+                <div class="info-item">
+                    <h3>Platform</h3>
+                    <p>Web Application</p>
+                </div>
+                <div class="info-item">
+                    <h3>Research Focus</h3>
+                    <p>Freelancer Community Needs</p>
+                </div>
+            </div>
+
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>
+                    Created a platform addressing real needs in the freelance community - helping freelancers find work, share portfolios, and connect with clients efficiently. Based on extensive research with actual freelancers across multiple fields, identifying pain points and validating solutions through concurrent and post-development research.
+                </p>
+                <p>
+                    This project emphasized human-centered design by deeply understanding the freelance ecosystem, from the challenges freelancers face in finding consistent work to the difficulties clients experience in discovering quality talent.
+                </p>
+
+                <div class="highlight">
+                    <h3>Community-Driven Design</h3>
+                    <p>Conducted extensive interviews and surveys with over 50 freelancers across design, development, writing, and marketing fields to understand real pain points and validate proposed solutions.</p>
+                </div>
+
+                <p>
+                    The resulting platform prioritizes authentic connections and meaningful project matching over traditional bidding systems, creating a more sustainable and people-focused approach to freelance work discovery.
+                </p>
+            </div>
+        </div>
+
+        <div class="pdf-section">
+            <h2>Project Documentation</h2>
+            <div class="pdf-container">
+                <iframe 
+                    class="pdf-viewer"
+                    src="pdfs/freelancer-social-network.pdf#view=FitH"
+                    type="application/pdf">
+                </iframe>
+                <!-- Fallback content for browsers that don't support PDF viewing -->
+                <div class="pdf-fallback" style="display: none;">
+                    <h3>View Project Documentation</h3>
+                    <p>Your browser doesn't support inline PDF viewing.</p>
+                    <a href="pdfs/freelancer-social-network.pdf" class="pdf-download-btn" target="_blank">
+                        Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Check if PDF loaded successfully
+        document.querySelector('.pdf-viewer').addEventListener('error', function() {
+            this.style.display = 'none';
+            document.querySelector('.pdf-fallback').style.display = 'block';
+        });
+
+        // Fallback for browsers that don't support PDF in iframe
+        document.querySelector('.pdf-viewer').addEventListener('load', function() {
+            try {
+                if (this.contentDocument && this.contentDocument.body && this.contentDocument.body.innerHTML === '') {
+                    this.style.display = 'none';
+                    document.querySelector('.pdf-fallback').style.display = 'block';
+                }
+            } catch(e) {
+                console.log('PDF viewer loaded');
+            }
+        });
+    </script>
+</body>
+</html>

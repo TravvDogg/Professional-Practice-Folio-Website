@@ -8,13 +8,23 @@
 
 /* Begin PBXFileReference section */
 		772F765C2E78F13200C84175 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		77D7D48B2E7AA01F00A9EFD1 /* principles-redesign.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "principles-redesign.html"; sourceTree = "<group>"; };
+		77AF36A22E7E3FAB006DF01F /* vega-ar-x.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "vega-ar-x.html"; sourceTree = "<group>"; };
+		77AF36A32E7E4146006DF01F /* quiet-app.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "quiet-app.html"; sourceTree = "<group>"; };
+		77AF36A42E7E415B006DF01F /* melbourne-walking-tours.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "melbourne-walking-tours.html"; sourceTree = "<group>"; };
+		77AF36A52E7E41A6006DF01F /* freelancer-social-network.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "freelancer-social-network.html"; sourceTree = "<group>"; };
+		77AF36A72E7E42AB006DF01F /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
+		77D7D48B2E7AA01F00A9EFD1 /* ux-principles-redesigns.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ux-principles-redesigns.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		772F76682E78F16600C84175 /* images */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = images;
+			sourceTree = "<group>";
+		};
+		77AF36A62E7E41E4006DF01F /* pdfs */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = pdfs;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -24,7 +34,13 @@
 			isa = PBXGroup;
 			children = (
 				772F765C2E78F13200C84175 /* index.html */,
-				77D7D48B2E7AA01F00A9EFD1 /* principles-redesign.html */,
+				77AF36A52E7E41A6006DF01F /* freelancer-social-network.html */,
+				77AF36A72E7E42AB006DF01F /* styles.css */,
+				77AF36A62E7E41E4006DF01F /* pdfs */,
+				77AF36A32E7E4146006DF01F /* quiet-app.html */,
+				77AF36A42E7E415B006DF01F /* melbourne-walking-tours.html */,
+				77AF36A22E7E3FAB006DF01F /* vega-ar-x.html */,
+				77D7D48B2E7AA01F00A9EFD1 /* ux-principles-redesigns.html */,
 				772F76682E78F16600C84175 /* images */,
 			);
 			sourceTree = "<group>";
