@@ -218,8 +218,23 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            min-height: 400px;
+            min-height: 600px;
         }
+        
+        a.project-link {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            width: 100%;
+        }
+
+        a.project-link:focus,
+        a.project-link:active,
+        a.project-link:visited {
+            color: inherit;
+            text-decoration: none;
+        }
+        
 
         .project:hover {
             transform: translateY(-5px);
@@ -244,44 +259,53 @@
             overflow: hidden;
         }
 
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
         .project-image::before {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80%;
-            height: 80%;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(102, 126, 234, 0.8);
+            z-index: 1;
         }
 
         .device-frame {
-            width: 60%;
-            height: 70%;
+            width: 80%;
+            aspect-ratio: 16/9;
             background: white;
             border-radius: 20px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.2);
             position: relative;
-            z-index: 1;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .device-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
         }
 
         .mobile .device-frame {
             width: 35%;
-            height: 75%;
+            aspect-ratio: 9/19.5;
             border-radius: 30px;
         }
 
-        .mobile .device-frame::before {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 40%;
-            height: 5px;
-            background: #ddd;
-            border-radius: 3px;
+        .mobile .device-frame img {
+            border-radius: 30px;
         }
 
         .project-content {
@@ -470,7 +494,7 @@
                         <li>Figma & Sketch</li>
                         <li>Adobe Creative Suite</li>
                         <li>Unity & Xcode</li>
-<!--                        <li>Fusion360</li>-->
+                        <li>Fusion360</li>
                     </ul>
                 </div>
             </div>
@@ -481,14 +505,17 @@
         <div class="container">
             <h2>Featured Projects</h2>
             <div class="project-grid">
-                <!-- Project 1: Melbourne Street Art -->
+                <!-- Project 1: Melbourne Walking Tours -->
                 <div class="project fade-in mobile">
                     <div class="project-image">
-                        <div class="device-frame"></div>
+<!--                        <img src="images/default_16-9.jpg" alt="Melbourne Walking Tours Background">-->
+                        <div class="device-frame">
+                            <img src="images/melbourne-walking-tours/mwt_thumbnail.png" alt="Melbourne Street Walking Tours Screenshot">
+                        </div>
                     </div>
                     <div class="project-content">
                         <span class="project-type">Mobile App</span>
-                        <h3>Melbourne Street Art</h3>
+                        <h3>Melbourne Walking Tours</h3>
                         <p class="project-tagline">"My introduction into UX design and Figma"</p>
                         <p>Created to guide Melbourne tourists through walking tours of the city's vibrant street art scene. This project marked my entry into UX design, where I conducted guerrilla user testing to validate design decisions and improve the user experience.</p>
                         <div class="project-details">
@@ -501,7 +528,10 @@
                 <!-- Project 2: VEGA AR-X -->
                 <div class="project fade-in mobile">
                     <div class="project-image">
-                        <div class="device-frame"></div>
+<!--                        <img src="images/default_16-9.jpg" alt="VEGA AR-X Background">-->
+                        <div class="device-frame">
+                            <img src="images/vega-ar-x/arx_thumbnail.jpeg" alt="VEGA AR-X App Screenshot">
+                        </div>
                     </div>
                     <div class="project-content">
                         <span class="project-type">Mobile App</span>
@@ -518,7 +548,10 @@
                 <!-- Project 3: Quiet -->
                 <div class="project fade-in mobile">
                     <div class="project-image">
-                        <div class="device-frame"></div>
+<!--                        <img src="images/default_16-9.jpg" alt="Quiet App Background">-->
+                        <div class="device-frame">
+                            <img src="images/quiet-app/wellness_thumbnail.jpeg" alt="Quiet App Screenshot">
+                        </div>
                     </div>
                     <div class="project-content">
                         <span class="project-type">Mobile App</span>
@@ -533,26 +566,35 @@
                 </div>
 
                 <!-- Project 4 & 5: UX Principles Redesigns -->
-                <div class="project fade-in">
-                    <div class="project-image">
-                        <div class="device-frame"></div>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-type">Web Redesign</span>
-                        <h3>UX Principles Redesigns</h3>
-                        <p class="project-tagline">"Tandem redesign of RMIT Enrolment & Amazon Homepage"</p>
-                        <p>Redesigned both RMIT's Enrolment Online website and Amazon's homepage using UX Design principles to improve user interaction flow, increase efficiency, and reduce error rates. Heavy focus on external user research (quantitative and qualitative), iterative development with concurrent user research, and A/B testing to quantify improvements.</p>
-                        <div class="project-details">
-                            <span><strong>Duration:</strong> 12 weeks</span>
-                            <span><strong>Role:</strong> UX Designer & Researcher</span>
+                <a href="principles-redesign.html" class="project-link">
+                    <div class="project fade-in">
+                        <div class="project-image">
+    <!--                        <img src="images/default_16-9.jpg" alt="UX Principles Redesigns Background">-->
+                            <div class="device-frame">
+                                <img src="images/ux-principles/amazon/amazonRD_dashboard.jpeg" alt="UX Principles Redesigns Screenshot">
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Web Redesign</span>
+                            <h3>UX Principles Redesigns</h3>
+                            <p class="project-tagline">"Tandem redesign of RMIT Enrolment & Amazon Homepage"</p>
+                            <p>Redesigned both RMIT's Enrolment Online website and Amazon's homepage using UX Design principles to improve user interaction flow, increase efficiency, and reduce error rates. Heavy focus on external user research (quantitative and qualitative), iterative development with concurrent user research, and A/B testing to quantify improvements.</p>
+                            <div class="project-details">
+                                <span><strong>Duration:</strong> 12 weeks</span>
+                                <span><strong>Role:</strong> UX Designer & Researcher</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
 
                 <!-- Project 6: Freelancer Platform -->
+                <a href="freelancer-website.html" style="text-decoration:none">
                 <div class="project fade-in">
                     <div class="project-image">
-                        <div class="device-frame"></div>
+<!--                        <img src="images/default_16-9.jpg" alt="Freelancer Platform Background">-->
+                        <div class="device-frame">
+                            <img src="images/ux-people/freelancers_homepage.jpeg" alt="Freelancer Platform Screenshot">
+                        </div>
                     </div>
                     <div class="project-content">
                         <span class="project-type">Web Platform</span>

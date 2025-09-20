@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		772F765C2E78F13200C84175 /* index.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
+		77D7D48B2E7AA01F00A9EFD1 /* principles-redesign.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "principles-redesign.html"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -23,6 +24,7 @@
 			isa = PBXGroup;
 			children = (
 				772F765C2E78F13200C84175 /* index.html */,
+				77D7D48B2E7AA01F00A9EFD1 /* principles-redesign.html */,
 				772F76682E78F16600C84175 /* images */,
 			);
 			sourceTree = "<group>";
