@@ -1,37 +1,5 @@
-// Template
-//
-
-//"id": "", // Same as folder path under projects/
-//"title": "",
-//"subtitle": "",  // one-sentence, very brief description of the project
-//"type": "", // "Web Redesign", "Web Platform", "Mobile App"
-//"duration": "",
-//"role": "", // "UX Designer & Researcher", "UX Designer", "Full Stack Developer & UX Designer"
-//"tools": "", // Figma, Prototyping, User Research, User Testing, A/B Testing, Xcode, Unity
-//"platform": "", // "Website" "Web Application" "iOS Mobile App" "Mobile App"
-//"thumbnail": "projects/",
-//"pdfPath": "projects/",
-//"overview": [ // Project Description
-//  "",
-//  "",
-//  ""
-//],
-//"highlight": { // Callout under overview
-//  "title": "",
-//  "description": ""
-//},
-//"additionalInfo": [ // In Sidebar Tab
-//  {
-//    "label": "",
-//    "value": ""
-//  }
-//]
-
-
-
 {
   "projects": [
-      
       
       {
         "id": "ux-principles-redesigns",
@@ -42,8 +10,8 @@
         "role": "UX Designer & Researcher",
         "tools": "Figma, User Research, A/B Testing",
         "platform": "Websites",
-        "thumbnail": "projects/ux-principles-redesigns/amazon/amazonRD_dashboard.jpeg",
-        "pdfPath": "projects/ux-principles-redesigns/case-study_ux-principles-redesigns.pdf",
+        "thumbnail": "amazon/amazonRD_dashboard.jpeg",
+        "pdfPath": "case-study_ux-principles-redesigns.pdf",
         "overview": [
           "Redesigned both RMIT's Enrolment Online website and Amazon's homepage using UX Design principles to improve user interaction flow, increase efficiency, and reduce error rates. Heavy focus on external user research (quantitative and qualitative), iterative development with concurrent user research, and A/B testing to quantify improvements.",
           "This dual redesign project allowed me to explore how fundamental UX principles apply differently across various platforms and user contexts: an academic enrollment system, and an e-commerce platform.",
@@ -70,8 +38,8 @@
         "role": "UX Designer & Researcher",
         "tools": "Figma, User Research, Prototyping",
         "platform": "Web Application",
-        "thumbnail": "projects/freelancer-social-network/freelancers_homepage.jpeg",
-        "pdfPath": "projects/freelancer-social-network/case-study_freelancer-social-network.pdf",
+        "thumbnail": "freelancers_homepage.jpeg",
+        "pdfPath": "case-study_freelancer-social-network.pdf",
         "overview": [
           "Created a platform addressing real needs in the freelance community, helping freelancers find work and connect with clients. Supported by research with actual freelancers across multiple fields to find existing problems and propose solutions.",
           "This project emphasized human-centered design by deeply understanding the freelance ecosystem, from the challenges freelancers face in finding consistent work to the difficulties clients experience in discovering quality talent.",
@@ -89,6 +57,56 @@
         ]
       },
       
+      {
+        "id": "vega-ar-x",
+        "title": "VEGA AR-X",
+        "subtitle": "Sprint-focused AR prototype for RMIT VEGA",
+        "type": "Mobile App",
+        "duration": "4 weeks",
+        "role": "UX Designer",
+        "tools": "Figma, Unity, User Testing",
+        "platform": "Mobile App",
+        "thumbnail": "arx_thumbnail.jpeg",
+        "pdfPath": "case-study_ar-x.pdf",
+        "overview": [
+          "A prototype application prototyped in Figma and built in Unity for RMIT VEGA's Augmented Reality experience. This short-timeframe sprint focused on rapid prototyping, extensive user testing, and meeting a simulated industry brief under tight deadlines.",
+          "The VEGA AR-X project challenged me to work within industry-standard sprint methodologies while delivering a functional AR prototype that met specific user requirements and technical constraints.",
+          "Working with Unity for the first time in a UX context taught me valuable lessons about the intersection of design and development, particularly how technical constraints impact user experience decisions in emerging technologies like AR."
+        ],
+        "highlight": {
+          "title": "Sprint Challenge",
+          "description": "Deliver a working AR prototype within a 4-week sprint while conducting continuous user testing and iterative design improvements. The tight timeline required efficient prioritization and rapid decision-making."
+        },
+        "additionalInfo": [
+          {
+            "label": "Client (simulated)",
+            "value": "RMIT VEGA"
+          }
+        ]
+      },
+      
+      {
+        "id": "quiet-app",
+        "title": "Quiet",
+        "subtitle": "Fully-functional meditation app",
+        "type": "Mobile App",
+        "duration": "12 weeks",
+        "role": "Full-stack Developer & UX Designer",
+        "tools": "Xcode, Figma, User Testing",
+        "platform": "iOS Mobile App",
+        "thumbnail": "wellness_thumbnail.jpeg",
+        "pdfPath": "case-study_quiet-app.pdf",
+        "overview": [
+          "A mindfulness and meditation app designed for young adults struggling with stress, motivation, and sleep. As my Advanced Diploma capstone project, I handled full-stack development including UX design, user testing, and implementation.",
+          "Built as a functioning application using Xcode with custom content and interactions, Quiet features custom gesture recognition and currently features two preset meditation exercises for relaxation and focus.",
+          "The 12-week development cycle allowed for extensive user research, iterative design, and comprehensive testing. This project demonstrated my ability to manage the complete product development, from concept to functional application."
+        ],
+        "highlight": {
+          "title": "Capstone project",
+          "description": "This was the largest scale project i worked on in my Diploma and Advanced Diploma. This project required me to learn and demonstrate technical capability in UX Design and Iteration, Sound Design, Project Coordination, and Xcode / Swift."
+        },
+        "additionalInfo": []
+      },
       
     {
       "id": "melbourne-walking-tours",
@@ -99,8 +117,8 @@
       "role": "UX Designer",
       "tools": "Figma, User Testing, Guerrilla Research",
       "platform": "iOS Mobile App",
-      "thumbnail": "projects/melbourne-walking-tours/mwt_thumbnail.jpeg",
-      "pdfPath": "projects/melbourne-walking-tours/case-study_walking-tours-app.pdf",
+      "thumbnail": "mwt_thumbnail.jpeg",
+      "pdfPath": "case-study_walking-tours-app.pdf",
       "overview": [
         "Melbourne Walking Tours was created to guide Melbourne tourists through walking tours of the city's vibrant street art scene. This project marked my entry into UX design, where I conducted guerrilla user testing to validate design decisions and improve the user experience.",
         "The app focuses on creating an intuitive navigation experience that helps tourists discover and explore Melbourne's iconic walks, as a digital tour guide.",
@@ -111,58 +129,6 @@
         "description": "Designing an intuitive mobile experience for tourists who may be unfamiliar with Melbourne's layout while ensuring the app works effectively in various lighting conditions and on-the-go scenarios."
       },
       "additionalInfo": []
-    },
-    
-    {
-      "id": "vega-ar-x",
-      "title": "VEGA AR-X",
-      "subtitle": "Sprint-focused AR prototype for RMIT VEGA",
-      "type": "Mobile App",
-      "duration": "4 weeks",
-      "role": "UX Designer",
-      "tools": "Figma, Unity, User Testing",
-      "platform": "Mobile App",
-      "thumbnail": "projects/vega-ar-x/arx_thumbnail.jpeg",
-      "pdfPath": "projects/vega-ar-x/case-study_ar-x.pdf",
-      "overview": [
-        "A prototype application prototyped in Figma and built in Unity for RMIT VEGA's Augmented Reality experience. This short-timeframe sprint focused on rapid prototyping, extensive user testing, and meeting a simulated industry brief under tight deadlines.",
-        "The VEGA AR-X project challenged me to work within industry-standard sprint methodologies while delivering a functional AR prototype that met specific user requirements and technical constraints.",
-        "Working with Unity for the first time in a UX context taught me valuable lessons about the intersection of design and development, particularly how technical constraints impact user experience decisions in emerging technologies like AR."
-      ],
-      "highlight": {
-        "title": "Sprint Challenge",
-        "description": "Deliver a working AR prototype within a 4-week sprint while conducting continuous user testing and iterative design improvements. The tight timeline required efficient prioritization and rapid decision-making."
-      },
-      "additionalInfo": [
-        {
-          "label": "Client (simulated)",
-          "value": "RMIT VEGA"
-        }
-      ]
-    },
-    
-    {
-      "id": "quiet-app",
-      "title": "Quiet",
-      "subtitle": "Fully-functional meditation app",
-      "type": "Mobile App",
-      "duration": "12 weeks",
-      "role": "Full-stack Developer & UX Designer",
-      "tools": "Xcode, Figma, User Testing",
-      "platform": "iOS Mobile App",
-      "thumbnail": "projects/quiet-app/wellness_thumbnail.jpeg",
-      "pdfPath": "projects/quiet-app/case-study_quiet-app.pdf",
-      "overview": [
-        "A mindfulness and meditation app designed for young adults struggling with stress, motivation, and sleep. As my Advanced Diploma capstone project, I handled full-stack development including UX design, user testing, and implementation.",
-        "Built as a functioning application using Xcode with custom content and interactions, Quiet features custom gesture recognition and currently features two preset meditation exercises for relaxation and focus.",
-        "The 12-week development cycle allowed for extensive user research, iterative design, and comprehensive testing. This project demonstrated my ability to manage the complete product development, from concept to functional application."
-      ],
-      "highlight": {
-        "title": "Capstone project",
-        "description": "This was the largest scale project i worked on in my Diploma and Advanced Diploma. This project required me to learn and demonstrate technical capability in UX Design and Iteration, Sound Design, Project Coordination, and Xcode / Swift."
-      },
-      "additionalInfo": []
     }
-    
   ]
 }

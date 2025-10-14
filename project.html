@@ -140,8 +140,8 @@
                 // Set PDF path
                 const pdfViewer = document.getElementById('pdf-viewer');
                 const pdfDownload = document.getElementById('pdf-download');
-                pdfViewer.src = `${project.pdfPath}#view=FitH`;
-                pdfDownload.href = project.pdfPath;
+                pdfViewer.src = `projects/${projectId}/${project.pdfPath}#view=FitH`;
+                pdfDownload.href = `projects/${projectId}/${project.pdfPath}`;
             })
             .catch(error => {
                 console.error('Error loading project data:', error);

@@ -1,0 +1,27 @@
+{
+    "id": "Same as folder path under projects/",
+    "title": "",
+    "subtitle": "one-sentence, very brief description of the project",
+    "type": "Web Redesign, Web Platform, Mobile App",
+    "duration": "",
+    "role": "UX Designer & Researcher, UX Designer, Full Stack Developer & UX Designer",
+    "tools": "Figma, Prototyping, User Research, User Testing, A/B Testing, Xcode, Unity",
+    "platform": "Website Web Application iOS Mobile App Mobile App",
+    "thumbnail": "projects/",
+    "pdfPath": "projects/",
+    "overview": [
+        "Project Description",
+        "Project Description",
+        "Project Description"
+    ],
+    "highlight": {
+        "title": "",
+        "description": "Callout under overview"
+    },
+    "additionalInfo": [
+        {
+            "label": "",
+            "value": "In Sidebar Tab"
+        }
+    ]
+}

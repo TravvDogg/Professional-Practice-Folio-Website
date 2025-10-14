@@ -11,6 +11,7 @@
 		77AF36A72E7E42AB006DF01F /* styles.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = styles.css; sourceTree = "<group>"; };
 		77C18A0B2E9DD86D005AEAA7 /* projects.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = projects.json; sourceTree = "<group>"; };
 		77C18A0C2E9DD8C8005AEAA7 /* project.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = project.html; sourceTree = "<group>"; };
+		77C18A4C2E9DE3AE005AEAA7 /* project_template.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = project_template.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -29,6 +30,7 @@
 				772F765C2E78F13200C84175 /* index.html */,
 				77C18A0C2E9DD8C8005AEAA7 /* project.html */,
 				77C18A0B2E9DD86D005AEAA7 /* projects.json */,
+				77C18A4C2E9DE3AE005AEAA7 /* project_template.json */,
 				77C18A4B2E9DDE54005AEAA7 /* projects */,
 			);
 			sourceTree = "<group>";
