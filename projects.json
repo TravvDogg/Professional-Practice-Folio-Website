@@ -58,31 +58,26 @@
       },
       
       {
-        "id": "vega-ar-x",
-        "title": "VEGA AR-X",
-        "subtitle": "Sprint-focused AR prototype for RMIT VEGA",
+        "id": "melbourne-walking-tours",
+        "title": "Melbourne Walking Tours",
+        "subtitle": "My introduction into UX design and Figma",
         "type": "Mobile App",
-        "duration": "4 weeks",
+        "duration": "6 weeks",
         "role": "UX Designer",
-        "tools": "Figma, Unity, User Testing",
-        "platform": "Mobile App",
-        "thumbnail": "arx_thumbnail.jpeg",
-        "pdfPath": "case-study_ar-x.pdf",
+        "tools": "Figma, User Testing, Guerrilla Research",
+        "platform": "iOS Mobile App",
+        "thumbnail": "mwt_thumbnail.jpeg",
+        "pdfPath": "case-study_walking-tours-app.pdf",
         "overview": [
-          "A prototype application prototyped in Figma and built in Unity for RMIT VEGA's Augmented Reality experience. This short-timeframe sprint focused on rapid prototyping, extensive user testing, and meeting a simulated industry brief under tight deadlines.",
-          "The VEGA AR-X project challenged me to work within industry-standard sprint methodologies while delivering a functional AR prototype that met specific user requirements and technical constraints.",
-          "Working with Unity for the first time in a UX context taught me valuable lessons about the intersection of design and development, particularly how technical constraints impact user experience decisions in emerging technologies like AR."
+          "Melbourne Walking Tours was created to guide Melbourne tourists through walking tours of the city's vibrant street art scene. This project marked my entry into UX design, where I conducted guerrilla user testing to validate design decisions and improve the user experience.",
+          "The app focuses on creating an intuitive navigation experience that helps tourists discover and explore Melbourne's iconic walks, as a digital tour guide.",
+          "Through iterative design and user testing, I learned the importance of validating assumptions early and often. The guerrilla testing approach provided invaluable insights into how real users interact with the interface in actual street conditions."
         ],
         "highlight": {
-          "title": "Sprint Challenge",
-          "description": "Deliver a working AR prototype within a 4-week sprint while conducting continuous user testing and iterative design improvements. The tight timeline required efficient prioritization and rapid decision-making."
+          "title": "Key Challenge",
+          "description": "Designing an intuitive mobile experience for tourists who may be unfamiliar with Melbourne's layout while ensuring the app works effectively in various lighting conditions and on-the-go scenarios."
         },
-        "additionalInfo": [
-          {
-            "label": "Client (simulated)",
-            "value": "RMIT VEGA"
-          }
-        ]
+        "additionalInfo": []
       },
       
       {
@@ -108,27 +103,32 @@
         "additionalInfo": []
       },
       
-    {
-      "id": "melbourne-walking-tours",
-      "title": "Melbourne Walking Tours",
-      "subtitle": "My introduction into UX design and Figma",
-      "type": "Mobile App",
-      "duration": "6 weeks",
-      "role": "UX Designer",
-      "tools": "Figma, User Testing, Guerrilla Research",
-      "platform": "iOS Mobile App",
-      "thumbnail": "mwt_thumbnail.jpeg",
-      "pdfPath": "case-study_walking-tours-app.pdf",
-      "overview": [
-        "Melbourne Walking Tours was created to guide Melbourne tourists through walking tours of the city's vibrant street art scene. This project marked my entry into UX design, where I conducted guerrilla user testing to validate design decisions and improve the user experience.",
-        "The app focuses on creating an intuitive navigation experience that helps tourists discover and explore Melbourne's iconic walks, as a digital tour guide.",
-        "Through iterative design and user testing, I learned the importance of validating assumptions early and often. The guerrilla testing approach provided invaluable insights into how real users interact with the interface in actual street conditions."
-      ],
-      "highlight": {
-        "title": "Key Challenge",
-        "description": "Designing an intuitive mobile experience for tourists who may be unfamiliar with Melbourne's layout while ensuring the app works effectively in various lighting conditions and on-the-go scenarios."
-      },
-      "additionalInfo": []
-    }
+      {
+        "id": "vega-ar-x",
+        "title": "VEGA AR-X",
+        "subtitle": "Sprint-focused AR prototype for RMIT VEGA",
+        "type": "Mobile App",
+        "duration": "4 weeks",
+        "role": "UX Designer",
+        "tools": "Figma, Unity, User Testing",
+        "platform": "Mobile App",
+        "thumbnail": "arx_thumbnail.jpeg",
+        "pdfPath": "case-study_ar-x.pdf",
+        "overview": [
+          "A prototype application prototyped in Figma and built in Unity for RMIT VEGA's Augmented Reality experience. This short-timeframe sprint focused on rapid prototyping, extensive user testing, and meeting a simulated industry brief under tight deadlines.",
+          "The VEGA AR-X project challenged me to work within industry-standard sprint methodologies while delivering a functional AR prototype that met specific user requirements and technical constraints.",
+          "Working with Unity for the first time in a UX context taught me valuable lessons about the intersection of design and development, particularly how technical constraints impact user experience decisions in emerging technologies like AR."
+        ],
+        "highlight": {
+          "title": "Sprint Challenge",
+          "description": "Deliver a working AR prototype within a 4-week sprint while conducting continuous user testing and iterative design improvements. The tight timeline required efficient prioritization and rapid decision-making."
+        },
+        "additionalInfo": [
+          {
+            "label": "Client (simulated)",
+            "value": "RMIT VEGA"
+          }
+        ]
+      }
   ]
 }
