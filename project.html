@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Project - Travis Lizio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Travis Lizio</a>
+            <div class="nav-links">
+                <a href="index.html#about">About</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html" class="back-btn">← Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="project-header">
+        <div class="project-type" id="project-type"></div>
+        <h1 id="project-title"></h1>
+        <p class="subtitle" id="project-subtitle"></p>
+    </header>
+
+    <div class="project-content">
+        <div class="project-info">
+            <div class="info-sidebar">
+                <div class="info-item">
+                    <h3>Duration</h3>
+                    <p id="project-duration"></p>
+                </div>
+                <div class="info-item">
+                    <h3>Role</h3>
+                    <p id="project-role"></p>
+                </div>
+                <div class="info-item">
+                    <h3>Tools</h3>
+                    <p id="project-tools"></p>
+                </div>
+                <div class="info-item">
+                    <h3>Platform</h3>
+                    <p id="project-platform"></p>
+                </div>
+                <div id="additional-info-container"></div>
+            </div>
+
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <div id="project-overview"></div>
+
+                <div class="highlight">
+                    <h3 id="highlight-title"></h3>
+                    <p id="highlight-description"></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pdf-section">
+            <h2>Project Documentation</h2>
+            <div class="pdf-container">
+                <iframe 
+                    class="pdf-viewer"
+                    id="pdf-viewer"
+                    type="application/pdf">
+                </iframe>
+                <div class="pdf-fallback" style="display: none;">
+                    <h3>View Project Documentation</h3>
+                    <p>Your browser doesn't support inline PDF viewing.</p>
+                    <a href="#" class="pdf-download-btn" id="pdf-download" target="_blank">
+                        Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get project ID from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+
+        if (!projectId) {
+            window.location.href = 'index.html';
+        }
+
+        // Load project data
+        fetch('projects.json')
+            .then(response => response.json())
+            .then(data => {
+                const project = data.projects.find(p => p.id === projectId);
+                
+                if (!project) {
+                    window.location.href = 'index.html';
+                    return;
+                }
+
+                // Populate page title
+                document.getElementById('page-title').textContent = `${project.title} - Travis Lizio`;
+
+                // Populate header
+                document.getElementById('project-type').textContent = project.type;
+                document.getElementById('project-title').textContent = project.title;
+                document.getElementById('project-subtitle').textContent = `"${project.subtitle}"`;
+
+                // Populate sidebar
+                document.getElementById('project-duration').textContent = project.duration;
+                document.getElementById('project-role').textContent = project.role;
+                document.getElementById('project-tools').textContent = project.tools;
+                document.getElementById('project-platform').textContent = project.platform;
+
+                // Add additional info items if they exist
+                const additionalInfoContainer = document.getElementById('additional-info-container');
+                if (project.additionalInfo && project.additionalInfo.length > 0) {
+                    project.additionalInfo.forEach(info => {
+                        const infoItem = document.createElement('div');
+                        infoItem.className = 'info-item';
+                        infoItem.innerHTML = `
+                            <h3>${info.label}</h3>
+                            <p>${info.value}</p>
+                        `;
+                        additionalInfoContainer.appendChild(infoItem);
+                    });
+                }
+
+                // Populate overview
+                const overviewContainer = document.getElementById('project-overview');
+                project.overview.forEach(paragraph => {
+                    const p = document.createElement('p');
+                    p.textContent = paragraph;
+                    overviewContainer.appendChild(p);
+                });
+
+                // Populate highlight
+                document.getElementById('highlight-title').textContent = project.highlight.title;
+                document.getElementById('highlight-description').textContent = project.highlight.description;
+
+                // Set PDF path
+                const pdfViewer = document.getElementById('pdf-viewer');
+                const pdfDownload = document.getElementById('pdf-download');
+                pdfViewer.src = `${project.pdfPath}#view=FitH`;
+                pdfDownload.href = project.pdfPath;
+            })
+            .catch(error => {
+                console.error('Error loading project data:', error);
+                window.location.href = 'index.html';
+            });
+
+        // PDF fallback handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const pdfViewer = document.querySelector('.pdf-viewer');
+            const pdfFallback = document.querySelector('.pdf-fallback');
+
+            pdfViewer.addEventListener('error', function() {
+                this.style.display = 'none';
+                pdfFallback.style.display = 'block';
+            });
+
+            pdfViewer.addEventListener('load', function() {
+                try {
+                    if (this.contentDocument && this.contentDocument.body && this.contentDocument.body.innerHTML === '') {
+                        this.style.display = 'none';
+                        pdfFallback.style.display = 'block';
+                    }
+                } catch(e) {
+                    console.log('PDF viewer loaded');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

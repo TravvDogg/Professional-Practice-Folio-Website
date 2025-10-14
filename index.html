@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travis Lizio - UX Designer Portfolio</title>
-        <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -80,111 +80,8 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2>Featured Projects</h2>
-            <div class="project-grid">
-                <!-- Project 1: Melbourne Walking Tours -->
-                <a href="melbourne-walking-tours.html" class="project-link">
-                    <div class="project fade-in mobile">
-                        <div class="project-image">
-                            <div class="device-frame">
-                                <img src="images/melbourne-walking-tours/mwt_thumbnail.jpeg" alt="Melbourne Street Walking Tours Screenshot">
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <span class="project-type">Mobile App</span>
-                            <h3>Melbourne Walking Tours</h3>
-                            <p class="project-tagline">"My introduction into UX design and Figma"</p>
-                            <p>Created to guide Melbourne tourists through walking tours of the city's vibrant street art scene. This project marked my entry into UX design, where I conducted guerrilla user testing to validate design decisions and improve the user experience.</p>
-                            <div class="project-details">
-                                <span><strong>Duration:</strong> 6 weeks</span>
-                                <span><strong>Role:</strong> UX Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Project 2: VEGA AR-X -->
-                <a href="vega-ar-x.html" class="project-link">
-                    <div class="project fade-in mobile">
-                        <div class="project-image">
-                            <div class="device-frame">
-                                <img src="images/vega-ar-x/arx_thumbnail.jpeg" alt="VEGA AR-X App Screenshot">
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <span class="project-type">Mobile App</span>
-                            <h3>VEGA AR-X</h3>
-                            <p class="project-tagline">"Sprint focused AR prototype for RMIT VEGA"</p>
-                            <p>A prototype application designed in Figma and built in Unity for RMIT VEGA's Augmented Reality experience. This short timeframe sprint focused on rapid prototyping with agile frameworks and meeting a simulated industry brief under tight deadlines.</p>
-                            <div class="project-details">
-                                <span><strong>Duration:</strong> 4 weeks</span>
-                                <span><strong>Role:</strong> UX Designer</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-<!--                <!-- Project 3: Quiet -->-->
-<!--                <a href="quiet-app.html" class="project-link">-->
-<!--                    <div class="project fade-in mobile">-->
-<!--                        <div class="project-image">-->
-<!--                            <div class="device-frame">-->
-<!--                                <img src="images/quiet-app/wellness_thumbnail.jpeg" alt="Quiet App Screenshot">-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="project-content">-->
-<!--                            <span class="project-type">Mobile App</span>-->
-<!--                            <h3>Quiet</h3>-->
-<!--                            <p class="project-tagline">"Fully functional meditation app"</p>-->
-<!--                            <p>A mindfulness and meditation app designed for young adults and students struggling with stress, motivation, and sleep. As my Advanced Diploma capstone project, I handled full stack development from the ground up. Built as a functioning application using Xcode with custom content and interactions.</p>-->
-<!--                            <div class="project-details">-->
-<!--                                <span><strong>Duration:</strong> 12 weeks</span>-->
-<!--                                <span><strong>Role:</strong> Full-stack Developer & UX Designer / Researcher</span>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </a>-->
-
-                <!-- Project 4: UX Principles Redesigns -->
-                <a href="ux-principles-redesigns.html" class="project-link">
-                    <div class="project fade-in">
-                        <div class="project-image">
-                            <div class="device-frame">
-                                <img src="images/ux-principles/amazon/amazonRD_dashboard.jpeg" alt="UX Principles Redesigns Screenshot">
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <span class="project-type">Web Redesign</span>
-                            <h3>UX Principles Redesigns</h3>
-                            <p class="project-tagline">"Tandem redesign of RMIT Enrolment & Amazon Homepage"</p>
-                            <p>Redesigned both RMIT's Enrolment Online website and Amazon's homepage using UX Design principles to improve user interaction flow, increase efficiency, and reduce error rates. Heavy focus on external user research (quantitative and qualitative), iterative development with concurrent user research, and A/B testing to quantify improvements.</p>
-                            <div class="project-details">
-                                <span><strong>Duration:</strong> 12 weeks</span>
-                                <span><strong>Role:</strong> UX Designer & Researcher</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <!-- Project 5: Freelancer Platform -->
-                <a href="freelancer-social-network.html" class="project-link">
-                    <div class="project fade-in">
-                        <div class="project-image">
-                            <div class="device-frame">
-                                <img src="images/ux-people/freelancers_homepage.jpeg" alt="Freelancer Platform Screenshot">
-                            </div>
-                        </div>
-                        <div class="project-content">
-                            <span class="project-type">Web Platform</span>
-                            <h3>Freelancer Social Network</h3>
-                            <p class="project-tagline">"People-centered platform for freelancers and clients"</p>
-                            <p>Created a platform addressing real needs in the freelance community. Centered around helping freelancers find work, share portfolios, and connect with clients efficiently. Based on extensive research with actual freelancers across multiple fields, identifying pain points and validating solutions through concurrent and post development research.</p>
-                            <div class="project-details">
-                                <span><strong>Duration:</strong> 12 weeks</span>
-                                <span><strong>Role:</strong> UX Designer & Researcher</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+            <div class="project-grid" id="project-grid">
+                <!-- Projects will be loaded dynamically from projects.json -->
             </div>
         </div>
     </section>
@@ -196,6 +93,50 @@
     </footer>
 
     <script>
+        // Load projects from JSON
+        fetch('projects.json')
+            .then(response => response.json())
+            .then(data => {
+                const projectGrid = document.getElementById('project-grid');
+                
+                data.projects.forEach(project => {
+                    const projectCard = document.createElement('a');
+                    projectCard.href = `project.html?id=${project.id}`;
+                    projectCard.className = 'project-link';
+                    
+                    // Determine if project is mobile or web
+                    const isMobile = project.type === 'Mobile App';
+                    
+                    projectCard.innerHTML = `
+                        <div class="project fade-in ${isMobile ? 'mobile' : ''}">
+                            <div class="project-image">
+                                <div class="device-frame">
+                                    <img src="${project.thumbnail}" alt="${project.title} Screenshot">
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <span class="project-type">${project.type}</span>
+                                <h3>${project.title}</h3>
+                                <p class="project-tagline">"${project.subtitle}"</p>
+                                <p>${project.overview[0]}</p>
+                                <div class="project-details">
+                                    <span><strong>Duration:</strong> ${project.duration}</span>
+                                    <span><strong>Role:</strong> ${project.role}</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    projectGrid.appendChild(projectCard);
+                });
+
+                // Initialize fade-in observer after projects are loaded
+                initializeFadeIn();
+            })
+            .catch(error => {
+                console.error('Error loading projects:', error);
+            });
+
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -207,29 +148,31 @@
         });
 
         // Fade in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        function initializeFadeIn() {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
 
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '0';
-                    entry.target.style.transform = 'translateY(20px)';
-                    setTimeout(() => {
-                        entry.target.style.transition = 'all 0.6s ease';
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, 100);
-                    observer.unobserve(entry.target);
-                }
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '0';
+                        entry.target.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            entry.target.style.transition = 'all 0.6s ease';
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }, 100);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.project').forEach(project => {
+                observer.observe(project);
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.project').forEach(project => {
-            observer.observe(project);
-        });
+        }
     </script>
 </body>
 </html>
