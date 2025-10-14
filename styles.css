@@ -19,6 +19,11 @@ body {
     padding: 0 20px;
 }
 
+html, body {
+    overscroll-behavior: none;
+}
+
+
 /* ===================
    NAVIGATION STYLES
 =================== */
@@ -194,7 +199,7 @@ header .tagline {
 .about-content {
     max-width: 800px;
     margin: 0 auto;
-    text-align: center;
+    text-align: left;
 }
 
 .about h2 {
@@ -204,6 +209,7 @@ header .tagline {
     color: #1a1a1a;
     font-weight: 400;
     letter-spacing: -1px;
+    text-align: center;
 }
 
 .about p {
