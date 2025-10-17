@@ -1,6 +1,33 @@
 {
   "projects": [
-      
+      {
+          "id": "savings-app",
+          "title": "Savings App",
+          "subtitle": "A savings app prototype design centered around iteration",
+          "type": "Mobile App",
+          "duration": "12 Weeks",
+          "role": "UX Designer & Researcher",
+          "tools": "Figma, User Research, Prototyping",
+          "platform": "iOS Mobile App",
+          "thumbnail": "savings-app_homescreen.jpeg",
+          "pdfPath": "case-study_savings-app.pdf",
+          "overview": [
+              "This project centered completely around the process and structure of identifying a problem, identifying a solution and implimenting the solution. This project had heavy focus on demonstrating and learning more about iterative development and user research.",
+              "While working on the Savings App project, important design principles were planted firmly into my design process and i was able to verifiably exercise them to achieve a high quality design process that was driven by real problems and challenged throughout the design process.",
+              "I present not just the final design, but the process behind it, and i encourage you to appreciate my design decisions as both good design and as informed decisions. I share my process on this project so you can appreciate the entire process, not just the end product."
+          ],
+          "highlight": {
+              "title": "Working with real problems",
+              "description": "The Savings App project was especially strong because it was driven by a real problem i was facing, and i was able to research the problem in a wider scope of other people with the same problem."
+          },
+          "additionalInfo": [
+              {
+                  "label": "",
+                  "value": "In Sidebar Tab"
+              }
+          ]
+      },
+
       {
         "id": "ux-principles-redesigns",
         "title": "UX Principles Redesigns",
